@@ -1,4 +1,4 @@
-# compress-integers
+# int-compress-string
 
 [![NPM](http://img.shields.io/npm/v/int-compress-string.svg?style=flat-square)](https://npmjs.org/package/int-compress-string)
 [![License](http://img.shields.io/npm/l/int-compress-string.svg?style=flat-square)](https://github.com/cj-p/int-compress-string)
@@ -14,6 +14,7 @@ When compressed, the size decreases by more than 80% on average, depending on th
 When decompressed, the order is not preserved and is sorted.
 
 ```js
+import {compress, decompress} from "int-compress-string";
 const finalOutput = compress([0,1,2,.......,99]); //TURIZkFkOEIzd0hGQVN6ZEFRPT0=
 const decompressed = decompress(finalOutput);
 expect(decompressed).to.deep.equal(decompressed); // true
