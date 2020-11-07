@@ -1,5 +1,8 @@
 # compress-integers
 
+[![NPM](http://img.shields.io/npm/v/int-compress-string.svg?style=flat-square)](https://npmjs.org/package/int-compress-string)
+[![License](http://img.shields.io/npm/l/int-compress-string.svg?style=flat-square)](https://github.com/cj-p/int-compress-string)
+
 Compresses an array of integers in the following range into a URL-safe short string. 
 
 |min | max|
