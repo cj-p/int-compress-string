@@ -2,10 +2,11 @@
 
 Compresses an array of integers in the following range into a URL-safe short string. 
 
----
-min : 0
-max : 64^30 === 1.532495540865889e+54
----
+|  |  |
+| --- | --- |
+| min | 0 |
+| max | 64^30 === 1.532495540865889e+54 |
+
 I wrote this function to store a large amount of sequential ID in a lmited URL query string (up to 2048 characters in Internet Explorer).  
 When compressed, the size decreases by more than 80% on average depending on the data characteristics.  
 When decompressed, the order is not preserved and is sorted.
