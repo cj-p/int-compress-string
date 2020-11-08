@@ -15,9 +15,10 @@ When decompressed, the order is not preserved and is sorted.
 
 ```js
 import {compress, decompress} from "int-compress-string";
-const finalOutput = compress([0,1,2,.......,99]); //TURIZkFkOEIzd0hGQVN6ZEFRPT0=
-const decompressed = decompress(finalOutput);
-expect(decompressed).to.deep.equal(decompressed); // true
+const original = [0,1,2,.......,99];
+const compressed = compress(); //TURIZkFkOEIzd0hGQVN6ZEFRPT0=
+const decompressed = decompress(compressed);
+expect(decompressed).to.deep.equal(original); // true
 ```
 
 ## How It Works
