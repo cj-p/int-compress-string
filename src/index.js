@@ -1,7 +1,7 @@
 import LZUTF8 from "lzutf8";
 import {BaseAlphabet} from "basealphabet";
 
-const ALIASES = "~!@#$%^&*()_+`{}|[]\\:\";'<>?./ \t";
+const ALIASES = "~!@#$%^&*()-_=`{}|[]\\:\";'<>?. \t";
 const ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/";
 const base64 = new BaseAlphabet({
   alphabet: ALPHABET,

@@ -7,7 +7,7 @@ Compresses an array of integers in the following range into a URL-safe short str
 
 |min | max|
 | --- | --- |
-| 0 | 64^30 === 1.532495540865889e+54 |
+| 0 | Number.MAX_SAFE_INTEGER === 9007199254740991 |
 
 I wrote this function to store a large amount of sequential ID in a lmited URL query string (up to 2048 characters in Internet Explorer).  
 When compressed, the size decreases by more than 80% on average, depending on the data characteristics.  
