@@ -29,4 +29,5 @@ expect(decompressed).to.deep.equal(original); // true
 1. Grouped by digit length and replaced with an alias of 1 character allocated for each digit length
 1. Concat and join each group and the replaced original array
 1. Compress once again with lzw
+1. Replace slash characters to underscore for using path parameter
 
