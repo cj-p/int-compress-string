@@ -33,11 +33,13 @@ export const compress = arr => {
 
   const numberCompressed = groupedByLength.map(arr => arr.join('')).join();
   const input = LZUTF8.compress(numberCompressed, {outputEncoding: "Base64"});
-  return LZUTF8.compress(input, {outputEncoding: "Base64"});
+  const compressed = LZUTF8.compress(input, {outputEncoding: "Base64"});
+  return compressed.replace('/','_'); // for using path parameter
 };
 
 export const decompress = compressed => {
-  const input = LZUTF8.decompress(compressed, {inputEncoding: "Base64"});
+  const underscoreReplacementRestored = compressed.replace('_', '/')
+  const input = LZUTF8.decompress(underscoreReplacementRestored, {inputEncoding: "Base64"});
   const numberCompressed = LZUTF8.decompress(input, {inputEncoding: "Base64"});
   const [originalArray, ...groupedByLength] = numberCompressed.split(',').map((s, i) => stringChop(s, i + 1));
   const groupedByLengthReverse = groupedByLength.map(a => a.reverse());
